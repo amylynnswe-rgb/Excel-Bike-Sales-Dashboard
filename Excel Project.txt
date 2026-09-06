@@ -1,0 +1,31 @@
+Created a working sheet
+Remove duplicate data (Data > Remove duplicates)
+
+Replace M and S with their full forms (Ctrl+H -> find and replace)
+1. For marital status, M for Married, S for Single
+2. For gender, F for Female, M for Male
+
+Created a new column for age range
+1. Write a formula IF(L2<31, "Adolescent", "Invalid")
+2. Nest the prev formula with another one IF(L2>=31, "Middle Age", IF(L2<31, "Adolescent", "Invalid"))
+3. Another formula for those older than 54, IF(L2>54, "Old", IF(L2>=31, "Middle Age", IF(L2<31, "Adolescent", "Invalid")))
+
+Create a new sheet named Pivot Table
+1. Click a cell > Insert > Pivot Table
+2. For range, choose the first cell in working sheet and Ctrl + A (it selects all the filled cells)
+
+3 Pivot Tables
+After creating a pivot table(drag features into relevant fields), Insert>Recommended Charts
+
+Finally, create a new sheet named Dashboard
+1. get rid of gridlines (select all cells from top left corner>View>Remove Gridlines)
+2. Select cells to create headline (fill it with blue color)then, Merge & Center
+3. Write "Bike Sales Dashboard", Font Size 36, Font Color White
+
+NOW Slicer 
+1.To create a slicer, click a cell from a pivot table > Insert > Slicer
+2.Click the slicer, you can see "Slicer" in the full Ribbon options
+3.Slicer > Settings > PivotTable Connections > Click all tables
+
+Do the same for all the slicers, and you got an interactive dashboard
+
