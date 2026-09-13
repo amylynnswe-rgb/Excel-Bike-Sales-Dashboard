@@ -8,8 +8,7 @@ A bike retailer wanted to know which customers to target with marketing spend, b
 
 The retailer needed to know which customer segments convert best so marketing spend isn't wasted. Specifically: does income predict who buys a bike, or are lifestyle factors like commute and car ownership more important? And how do age, region, and marital status factor in? The goal was a dashboard stakeholders could filter themselves, without an analyst re-running reports.
 
-![Dashboard Preview](Screenshot_202<img width="955" height="637" alt="Screenshot 2026-09-13 152129" src="https://github.com/user-attachments/assets/bd64dc2f-df0c-4970-9483-88097240ccd1" />
-6-09-13_152129.png)
+<img width="955" height="637" alt="Screenshot 2026-09-13 152129" src="https://github.com/user-attachments/assets/bd64dc2f-df0c-4970-9483-88097240ccd1" />
 
 ### Methodology:
 
