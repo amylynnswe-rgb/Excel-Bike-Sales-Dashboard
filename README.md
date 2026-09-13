@@ -1,29 +1,37 @@
-# 🚲 Excel Bike Sales Dashboard & Analysis
+# Bike Sales Analysis Dashboard (Excel)
 
-An interactive Excel dashboard built to analyze customer purchasing behavior, demographics, and regional trends for a bicycle retail business. This project covers the full end-to-end data analysis workflow: from raw data cleaning and conditional transformations to dynamic pivot tables, pivot charts, and synchronized slicers.
+## Executive Summary:
 
----
+A bike retailer wanted to know which customers to target with marketing spend, but had no clear view of who actually buys bikes. Using Excel, I cleaned a 1,000-row customer dataset, built pivot tables to analyze purchase behavior across demographics, and created an interactive dashboard with slicers so stakeholders can self-serve the answers. The analysis found that commute distance, car ownership, and age predict bike purchases far more strongly than income, and I recommend the business retarget its marketing around commuters and car-light households rather than high earners.
 
-## 📊 Project Overview
+### Business Problem:
 
-Understanding customer demographics is critical for targeted marketing and inventory planning in retail. This project analyzes customer attributes—such as income, marital status, age, commute distance, and region—to determine what drives bike purchases.
+The retailer needed to know which customer segments convert best so marketing spend isn't wasted. Specifically: does income predict who buys a bike, or are lifestyle factors like commute and car ownership more important? And how do age, region, and marital status factor in? The goal was a dashboard stakeholders could filter themselves, without an analyst re-running reports.
 
-### **Dataset Features**
-* **Demographics:** Age, Gender, Marital Status, Education, Occupation.
-* **Financials & Lifestyle:** Annual Income, Number of Children, Home Ownership, Number of Cars Owned, Commute Distance, Region.
-* **Target Variable:** Bike Purchase Status (`Yes` / `No`).
+![Dashboard Preview](Screenshot_202<img width="955" height="637" alt="Screenshot 2026-09-13 152129" src="https://github.com/user-attachments/assets/bd64dc2f-df0c-4970-9483-88097240ccd1" />
+6-09-13_152129.png)
 
----
+### Methodology:
 
-## 🛠️ Project Workflow & Methodology
+1. Cleaned the raw dataset in a working sheet: removed duplicates and standardized shorthand codes (e.g., M/S, M/F) into readable labels.
+2. Engineered an Age Brackets column with nested IF formulas to segment customers into Adolescent, Middle Age, and Old.
+3. Built three pivot tables and charts to analyze purchases by income, age bracket, and commute distance.
+4. Designed a Dashboard sheet with a styled headline and all three charts on one screen.
+5. Added slicers (Marital Status, Region, Education) connected across all pivot tables for real-time, self-service filtering.
 
-The project follows a structured data analysis pipeline implemented entirely in Microsoft Excel:
+### Skills:
 
-### 1. Data Cleaning & Preparation (`Working Sheet`)
-* **Duplicate Removal:** Cleaned the raw dataset (`bike_buyers`) by removing duplicate rows (`Data > Remove Districts/Duplicates`).
-* **Value Mapping:** Standardized abbreviations using Find & Replace (`Ctrl + H`):
-  * **Marital Status:** `M` $\rightarrow$ `Married`, `S` $\rightarrow$ `Single`
-  * **Gender:** `M` $\rightarrow$ `Male`, `F` $\rightarrow$ `Female`
-* **Age Group Categorization:** Created a custom conditional formula to segment customers into distinct age brackets:
-  ```excel
-  =IF(L2>54, "Old", IF(L2>=31, "Middle Age", IF(L2<31, "Adolescent", "Invalid")))
+Excel: Data cleaning, nested IF formulas, PivotTables, PivotCharts, dashboard design, slicers linked across multiple pivot tables
+
+### Results & Business Recommendation:
+
+The dashboard shows purchase rate isn't driven by income the way stakeholders assumed. Customers within 0-1 miles of work buy at ~55%, dropping to ~30% at 10+ miles. Customers with 0 cars buy at ~61%, falling as car count rises. Middle-aged customers (31-54) convert at ~55%, versus ~31-35% for younger and older groups. Meanwhile, average income for buyers vs. non-buyers barely differs across genders, and the Pacific region outconverts North America (~59% vs. ~43%) despite similar income levels.
+
+Because proximity, car ownership, and age are the strongest signals, I recommend the business:
+
+1. Target marketing at commuters within 1-2 miles of workplaces rather than by income bracket.
+2. Focus campaigns on the 31-54 age group with messaging around convenience and health, not affordability.
+3. Position bikes as a car alternative for low car-ownership households.
+4. Investigate why North America underperforms the Pacific region despite similar customer income profiles.
+
+I believe these changes will focus marketing spend on the segments most likely to convert, and the dashboard gives the sales team a way to explore any segment on their own going forward.
